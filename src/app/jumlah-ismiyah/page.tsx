@@ -1,0 +1,7 @@
+import { SentenceBuilder } from "@/components/sentence-builder";
+import { sentenceExercises } from "@/lib/sample-data";
+
+export default function JumlahIsmiyahPage() {
+  const exercises = sentenceExercises.filter((item) => item.type === "ismiyah");
+  return <main className="mx-auto min-h-screen max-w-4xl px-5 py-14"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#176b52]">Tata bahasa Arab</p><h1 className="mt-3 text-4xl font-black">Jumlah Ismiyah</h1><p className="mt-3 leading-7 text-[#718078]">Jumlah ismiyah adalah kalimat yang diawali isim. Unsur pokoknya terdiri dari mubtada' (pokok pembicaraan) dan khabar (keterangan).</p><div className="my-8 rounded-3xl bg-[#eaf2ec] p-6"><p className="text-sm font-bold text-[#176b52]">Contoh</p><p className="arabic mt-3 text-center text-4xl font-bold text-[#176b52]" dir="rtl">الْكِتَابُ جَدِيدٌ</p><p className="mt-2 text-center text-sm text-[#64766c]">Buku itu baru.</p><div className="mt-5 grid gap-3 sm:grid-cols-2"><div className="rounded-2xl bg-white p-4"><p className="arabic text-2xl font-bold" dir="rtl">الْكِتَابُ</p><p className="mt-1 text-sm font-bold">Mubtada'</p><p className="text-xs text-[#718078]">Isim yang diterangkan.</p></div><div className="rounded-2xl bg-white p-4"><p className="arabic text-2xl font-bold" dir="rtl">جَدِيدٌ</p><p className="mt-1 text-sm font-bold">Khabar</p><p className="text-xs text-[#718078]">Keterangan tentang mubtada'.</p></div></div></div><h2 className="mb-4 text-xl font-bold">Ayo susun kalimat!</h2><SentenceBuilder exercises={exercises}/></main>;
+}
